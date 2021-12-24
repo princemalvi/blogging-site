@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"
+  metadata-complete="true">
+
+  <welcome-file-list>
+     <welcome-file>/ourstory.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>  
+    <servlet-name>Login</servlet-name>  
+    <servlet-class>controller.LoginController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Login</servlet-name>  
+    <url-pattern>/login</url-pattern> 
+  </servlet-mapping>
+
+  <servlet>  
+    <servlet-name>Registration</servlet-name>  
+    <servlet-class>controller.RegistrationController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Registration</servlet-name>  
+    <url-pattern>/register</url-pattern> 
+  </servlet-mapping>
+
+ <servlet>  
+    <servlet-name>Update Profile</servlet-name>  
+    <servlet-class>controller.ProfileController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Update Profile</servlet-name>  
+    <url-pattern>/updateprofile</url-pattern> 
+  </servlet-mapping>
+
+  <servlet>  
+    <servlet-name>My Posts</servlet-name>  
+    <servlet-class>controller.GetAllUserPostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>My Posts</servlet-name>  
+    <url-pattern>/my-post</url-pattern> 
+  </servlet-mapping>
+
+ <servlet>  
+    <servlet-name>Delete Post</servlet-name>  
+    <servlet-class>controller.DeleteUserPostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Delete Post</servlet-name>  
+    <url-pattern>/delete-post</url-pattern> 
+  </servlet-mapping>
+
+   <servlet>  
+    <servlet-name>Add a Post</servlet-name>  
+    <servlet-class>controller.AddPostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Add a Post</servlet-name>  
+    <url-pattern>/addpost</url-pattern> 
+  </servlet-mapping>
+
+   <servlet>  
+    <servlet-name>All Post</servlet-name>  
+    <servlet-class>controller.HomePagePostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>All Post</servlet-name>  
+    <url-pattern>/all-post</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>  
+    <servlet-name>Like Post</servlet-name>  
+    <servlet-class>controller.PostLikeController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Like Post</servlet-name>  
+    <url-pattern>/like-post</url-pattern> 
+    </servlet-mapping>
+
+      
+  <servlet>  
+    <servlet-name>Dislike Post</servlet-name>  
+    <servlet-class>controller.PostDisLikeController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Dislike Post</servlet-name>  
+    <url-pattern>/dislike-post</url-pattern> 
+  </servlet-mapping>
+  
+
+
+  <servlet>  
+    <servlet-name>Follow User</servlet-name>  
+    <servlet-class>controller.FollowUserController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Follow User</servlet-name>  
+    <url-pattern>/follow-user</url-pattern> 
+    </servlet-mapping>
+
+      
+  <servlet>  
+    <servlet-name>Unfollow User</servlet-name>  
+    <servlet-class>controller.UnfollowUserController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Unfollow User</servlet-name>  
+    <url-pattern>/unfollow-user</url-pattern> 
+  </servlet-mapping>
+  
+
+
+  <servlet>  
+    <servlet-name>Single Post</servlet-name>  
+    <servlet-class>controller.SinglePostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Single Post</servlet-name>  
+    <url-pattern>/single-post</url-pattern> 
+  </servlet-mapping>
+
+
+
+
+
+  <servlet>  
+    <servlet-name>User Profile</servlet-name>  
+    <servlet-class>controller.UserProfileController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>User Profile</servlet-name>  
+    <url-pattern>/user-profile</url-pattern> 
+  </servlet-mapping>
+
+
+
+  <servlet>  
+    <servlet-name>Single User All Post</servlet-name>  
+    <servlet-class>controller.GetPostOfUserController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Single User All Post</servlet-name>  
+    <url-pattern>/single-user-posts</url-pattern> 
+  </servlet-mapping>
+
+
+
+
+
+  <context-param> 
+      <description>Location to store uploaded file</description> 
+      <param-name>file-upload</param-name> 
+      <param-value>
+        C:\apache-tomcat-9.0.55\webapps\freeblogger\profile\
+      </param-value> 
+   </context-param>
+
+  <servlet>  
+    <servlet-name>Forgot Password</servlet-name>  
+    <servlet-class>controller.ForgotPasswordController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Forgot Password</servlet-name>  
+    <url-pattern>/forgotpassword</url-pattern> 
+  </servlet-mapping> 
+
+  
+
+
+  <servlet>  
+    <servlet-name>Change Password</servlet-name>  
+    <servlet-class>controller.ChangePasswordController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Change Password</servlet-name>  
+    <url-pattern>/change-password</url-pattern> 
+  </servlet-mapping> 
+
+  
+
+   <!-- Admin side urls -->
+ 
+
+
+  <servlet>  
+    <servlet-name>AdminLogin</servlet-name>  
+    <servlet-class>controller.AdminLoginController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>AdminLogin</servlet-name>  
+    <url-pattern>/admin/admin-login</url-pattern> 
+  </servlet-mapping> 
+
+  <servlet>  
+    <servlet-name>Admin View Post</servlet-name>  
+    <servlet-class>controller.AdminViewPostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Admin View Post</servlet-name>  
+    <url-pattern>/admin/view-post</url-pattern> 
+  </servlet-mapping> 
+
+ <servlet>  
+    <servlet-name>Approve Post</servlet-name>  
+    <servlet-class>controller.AdminApprovePostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Approve Post</servlet-name>  
+    <url-pattern>/admin/approve-post</url-pattern> 
+  </servlet-mapping> 
+
+ <servlet>  
+    <servlet-name>Reject Post</servlet-name>  
+    <servlet-class>controller.AdminRejectPostController</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>Reject Post</servlet-name>  
+    <url-pattern>/admin/reject-post</url-pattern> 
+  </servlet-mapping> 
+
+</web-app>

@@ -1,0 +1,15 @@
+<%@include file="header.jsp" %>
+
+    <%
+        if (request.getAttribute("login_message") != null) {
+            out.print(request.getAttribute("login_message"));
+        }
+    %>
+
+   
+        <form action="login" method="post">
+            <input type="text" name="email"/><br/>
+            <input type="password" name="password"/><br/>
+            <input type="submit">
+        </form>
+<%@include file="footer.jsp" %>
